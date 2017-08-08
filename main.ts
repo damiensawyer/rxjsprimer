@@ -1,10 +1,9 @@
-/// <reference path="circle.ts"/>
-
+import { Circle } from './circle';
 import {Observable, Observer} from 'rxjs';
-import * as cc from './circle';
-//alert('hello ddd ');
+
+new Circle(); // by doing this we're causing Circle to load. I'm guessing there's a cleaner way to do this.
+
 let numbers = [1,2,3];
-//cc.CircleMove();
 let source = Observable.from(numbers);
 source.subscribe(x => console.log(x));
 
