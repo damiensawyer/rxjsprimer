@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-export class Circle {
+export class MyCircle {
     constructor() {
         console.log('in ciricle constructor');
         let circle = document.getElementById('circle');
@@ -9,7 +9,7 @@ export class Circle {
     bindToCircle(circle:HTMLElement) {
         console.log('in bind to Circle');
         
-        console//.log(circle);
+        console.log(circle);
         let source = Observable.fromEvent(document, "mousemove")
             .map((e: MouseEvent) => {
                 return {
@@ -26,7 +26,7 @@ export class Circle {
         });
     }
 };
-
+var c = new MyCircle();
 // read this. https://www.typescriptlang.org/docs/handbook/modules.html
 // https://medium.freecodecamp.org/javascript-modules-a-beginner-s-guide-783f7d7a5fcc
 

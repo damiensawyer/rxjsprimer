@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --watch --inline",
+    "buildprod" : "webpack -p", // npm run buildprod to execute
     "postinstall": "typings install",
     "test": "echo \"Error: no test specified\" && exit 1"
+
   },
   "author": "",
   "license": "ISC",

@@ -1,7 +1,4 @@
-import { Circle } from './circle';
 import {Observable, Observer} from 'rxjs';
-
-var deps = [new Circle()]; // by doing this we're causing Circle to be included in webpack. I'm guessing there's a cleaner way to do this.
 
 let numbers = [1,2,3];
 let source = Observable.from(numbers);
