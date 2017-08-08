@@ -2,12 +2,13 @@ import { Observable } from 'rxjs';
 export class Circle {
     constructor() {
         console.log('in ciricle constructor');
-        this.bindToCircle();
+        let circle = document.getElementById('circle');
+        if (!!circle) this.bindToCircle(circle);
     }
 
-    bindToCircle() {
+    bindToCircle(circle:HTMLElement) {
         console.log('in bind to Circle');
-        let circle = document.getElementById('circle');
+        
         console//.log(circle);
         let source = Observable.fromEvent(document, "mousemove")
             .map((e: MouseEvent) => {
@@ -22,10 +23,7 @@ export class Circle {
             console.log(`yay ${x}`);
             circle.style.left = x.x.toString();
             circle.style.top = x.y.toString();
-
-
         });
-
     }
 };
 
