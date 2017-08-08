@@ -1,6 +1,10 @@
+/// <reference path="circle.ts"/>
+
 import {Observable, Observer} from 'rxjs';
-//alert('hello ddd');
+import * as cc from './circle';
+//alert('hello ddd ');
 let numbers = [1,2,3];
+//cc.CircleMove();
 let source = Observable.from(numbers);
 source.subscribe(x => console.log(x));
 
