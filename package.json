@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --watch --inline",
-    "buildprod" : "webpack -p", // npm run buildprod to execute
+    "//": " use npm run buildprod to execute",
+    "buildprod": "webpack -p",
     "postinstall": "typings install",
     "test": "echo \"Error: no test specified\" && exit 1"
 
