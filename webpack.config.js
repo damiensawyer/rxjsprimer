@@ -2,12 +2,12 @@ module.exports = {
     entry: ["./main", "./mycircle"],
     output: { filename: "app.js" }, // webpack output to a single file that you can upload to a browser.
     module: {
-        loaders: [
-            {
-                test: /.ts$/, // ts files will be found and piped to the ts-loader
-                exclude: /node_modules/,
-                loader: "ts-loader",
-            }
+        rules: [
+            // All files with a '.ts' extension will be handled by 'awesome-typescript-loader'.
+            { test: /\.ts$/, loader: "ts-loader" },
+
+            // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+            { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
         ]
     },
     resolve: {

@@ -1,14 +1,20 @@
 import { Observable } from 'rxjs';
+//import * as _ from 'lodash'; // can import the whole thing... 
+import { each, range } from 'lodash'; // or can import specific functions. 
+// this is interesting https://github.com/efidiles/lodash-ts-imports-loader
+//import 'rxjs/add/operator/delay';
+//import 'lodash/fp/each';
 export class MyCircle {
     constructor() {
         console.log('in ciricle constructor');
         let circle = document.getElementById('circle');
         if (!!circle) this.bindToCircle(circle);
+        each(range(5), x => { console.log('just showing that we have access to lodash ' + x.toString()); });
     }
 
-    bindToCircle(circle:HTMLElement) {
+    bindToCircle(circle: HTMLElement) {
         console.log('in bind to Circle');
-        
+
         console.log(circle);
         let source = Observable.fromEvent(document, "mousemove")
             .map((e: MouseEvent) => {

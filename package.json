@@ -7,20 +7,21 @@
     "start": "webpack-dev-server --watch --inline",
     "//": " use npm run buildprod to execute",
     "buildprod": "webpack -p",
-    "postinstall": "typings install",
     "test": "echo \"Error: no test specified\" && exit 1"
-
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/es6-shim": "^0.31.34",
+    "lodash": "^4.17.4",
     "rxjs": "^5.4.2",
-    "systemjs": "^0.20.17"
+    "source-map-loader": "^0.2.1",
+    "systemjs": "^0.20.17",
+    "ts-loader": "^2.3.2"
   },
   "devDependencies": {
-    "ts-loader": "^2.3.2",
+    "@types/lodash": "^4.14.72",
     "typescript": "^2.4.2",
-    "typings": "^2.1.1",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"
   }
